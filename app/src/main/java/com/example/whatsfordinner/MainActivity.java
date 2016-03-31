@@ -1,5 +1,6 @@
 package com.example.whatsfordinner;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
+public class MainActivity extends Activity {
 
     private Button btnWhatsForDinner;
 
@@ -19,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initUI();
     }
+
 
     /**
      * A method to initialise all resources for screen

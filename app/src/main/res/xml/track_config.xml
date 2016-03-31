@@ -6,17 +6,27 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- TODO :  Add all screen names here    -->
+    <!--   TODO :  Add all screen names here-->
     <ScreenName name="com.example.whatsfordinner.MainActivity">Main Screen</ScreenName>
     <ScreenName name="com.example.whatsfordinner.ShowDinnerActivity">Show Dinner Screen</ScreenName>
-    <ScreenName name="com.example.whatsfordinner.OrderDinnerActivity">Order Dinner Screen</ScreenName>
+    <ScreenName name="com.example.whatsfordinner.OrderDinnerActivity">Order Dinner Screen
+    </ScreenName>
     <ScreenName name="com.example.whatsfordinner.RemoveMealActivity">Remove Meal Screen</ScreenName>
     <ScreenName name="com.example.whatsfordinner.ShowRecipeActivity">Show Recipe Screen</ScreenName>
 
-    <!-- Tracker Configurations -->
-    <string name="ga_trackingId">UA-75679174-2</string>
-    <string name="ga_autoActivityTracking">true</string>
-    <string name="ga_AppName">WhatsForDinner</string>
+    <!-- Tracker Configurations : First two must be added in configuration file to enable tracking-->
 
+    <!--The Google Analytics tracking ID to which to send your data. Dashes in the ID must be unencoded-->
+    <string name="ga_trackingId">UA-75679174-2</string>
+    <!--If true, views (Activities) will be tracked automatically.-->
+    <bool name="ga_autoActivityTracking">true</bool>
+    <!--used in the app name dimension in your reports-->
+    <string name="ga_AppName">WhatsForDinner</string>
+    <!--used in the app version dimension within your reports.-->
+    <string name="ga_appVersion">1.0.0</string>
+    <!--If true, Google Analytics automatically records an Exception each time an uncaught exception is thrown in your application.-->
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+    <!-- End current session if app sleeps for a period of time -->
+    <integer name="ga_sessionTimeout">300</integer>
 
 </resources>
