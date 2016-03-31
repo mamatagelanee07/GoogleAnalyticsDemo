@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Reference links :
+1. Configurations : https://developers.google.com/analytics/devguides/collection/android/v4/parameters
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- TODO :  Add all screen names here    -->
+    <ScreenName name="com.example.whatsfordinner.MainActivity">Main Screen</ScreenName>
+    <ScreenName name="com.example.whatsfordinner.ShowDinnerActivity">Show Dinner Screen</ScreenName>
+    <ScreenName name="com.example.whatsfordinner.OrderDinnerActivity">Order Dinner Screen</ScreenName>
+    <ScreenName name="com.example.whatsfordinner.RemoveMealActivity">Remove Meal Screen</ScreenName>
+    <ScreenName name="com.example.whatsfordinner.ShowRecipeActivity">Show Recipe Screen</ScreenName>
+
+    <!-- Tracker Configurations -->
+    <string name="ga_trackingId">UA-75679174-2</string>
+    <string name="ga_autoActivityTracking">true</string>
+    <string name="ga_AppName">WhatsForDinner</string>
+
+
+</resources>

@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.whatsfordinner">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +22,7 @@
         <activity
             android:name=".ShowRecipeActivity"
             android:label=""
-            android:parentActivityName=".ShowRecipeActivity" >
+            android:parentActivityName=".ShowRecipeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ShowDinnerActivity" />
@@ -28,7 +31,7 @@
         <activity
             android:name=".OrderDinnerActivity"
             android:label=""
-            android:parentActivityName=".OrderDinnerActivity" >
+            android:parentActivityName=".OrderDinnerActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ShowDinnerActivity" />
@@ -37,7 +40,7 @@
         <activity
             android:name=".RemoveMealActivity"
             android:label=""
-            android:parentActivityName=".RemoveMealActivity" >
+            android:parentActivityName=".RemoveMealActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ShowDinnerActivity" />
