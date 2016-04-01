@@ -17,7 +17,7 @@
     <!-- Tracker Configurations : First two must be added in configuration file to enable tracking-->
 
     <!--The Google Analytics tracking ID to which to send your data. Dashes in the ID must be unencoded-->
-    <string name="ga_trackingId">UA-75679174-2</string>
+    <string name="ga_trackingId">UA-XXXXXXXX-X</string>
     <!--If true, views (Activities) will be tracked automatically.-->
     <bool name="ga_autoActivityTracking">true</bool>
     <!--used in the app name dimension in your reports-->
