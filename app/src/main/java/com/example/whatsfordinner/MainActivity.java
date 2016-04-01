@@ -25,6 +25,37 @@ public class MainActivity extends Activity {
         initUI();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        startTracking();
+    }
+
+    /**
+     * To start tracking this screen manually
+     */
+    public void startTracking() {
+        // Get a tracker
+        Tracker tracker = ((WhatsForDinnerApp) getApplication()).getTracker();
+        // Set a screen name to tracker
+        tracker.setScreenName(Constants.SCREEN_MAIN);
+        // Send hit to Analytics
+        tracker.send(new HitBuilders.ScreenViewBuilder().build());
+    }
+
+    /**
+     * To send an event
+     */
+    public void sendEvent() {
+        // Get Tracker
+        Tracker tracker = ((WhatsForDinnerApp) getApplication()).getTracker();
+        // Send Event
+        tracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Main Screen")
+                .setAction("Button clicked")
+                .setLabel("Label")
+                .build());
+    }
 
     /**
      * A method to initialise all resources for screen
@@ -83,6 +114,7 @@ public class MainActivity extends Activity {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.btn_whats_for_dinner:
+                    sendEvent();
                     showFoodPreferenceMenu(view);
                     break;
                 default:

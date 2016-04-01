@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 public class ShowDinnerActivity extends AppCompatActivity {
 
     TextView tv;
@@ -39,21 +42,31 @@ public class ShowDinnerActivity extends AppCompatActivity {
         tv.setText(mDinner);
     }
 
-    public void orderOnline (View view) {
+    public void orderOnline(View view) {
         // Start an intent to allow the user to order dinner online
         Intent intent = new Intent(this, OrderDinnerActivity.class);
         intent.putExtra(selectedDinnerExtrasKey, mDinner);
         startActivity(intent);
     }
 
-    public void removeMeal (View view) {
+    public void removeMeal(View view) {
+
+        // Get Tracker
+        Tracker tracker = ((WhatsForDinnerApp) getApplication()).getTracker();
+        // Send Event
+        tracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Dinner Actions")
+                .setAction("Dislike Dinner Choice")
+                .setLabel(mDinner)
+                .build());
+
         // Start an intent to remove the dinner suggestion
         Intent intent = new Intent(this, RemoveMealActivity.class);
         intent.putExtra(selectedDinnerExtrasKey, mDinner);
         startActivity(intent);
     }
 
-    public void showRecipe (View view) {
+    public void showRecipe(View view) {
         // Start an intent to show the recipe for the dinner suggestion
         Intent intent = new Intent(this, ShowRecipeActivity.class);
         intent.putExtra(selectedDinnerExtrasKey, mDinner);

@@ -1,2 +1,16 @@
 Google Analytics provides below features :
 
+1. Screen Tracking : What my users do?
+2. Event Tracking : What my users do?
+3. Goal Tracking : Are users completing my app objectives?
+4. E-commerce Tracking : Are users spending money?
+5. Custom Timing : How long does it take?
+6. Crash & Exception Tracking : How do things go wrong?
+7. Campaign Tracking : How did user download my app?
+
+Note :
+
+* To enable debug logging on a device run:
+adb shell setprop log.tag.GAv4 DEBUG
+adb logcat -s GAv4
+
